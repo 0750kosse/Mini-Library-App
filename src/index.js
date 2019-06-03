@@ -15,14 +15,16 @@ function newTitle() {
   const li = document.createElement('li');
   const bookName = document.createElement('span');
   const deletBtn = document.createElement('span');
-  bookName.className = 'name';
-  deletBtn.className = 'delete';
-  bookName.textContent = newBook;
-  deletBtn.textContent = "delete";
-  li.appendChild(bookName);
-  li.appendChild(deletBtn);
-  list.appendChild(li);
-  deletBtn.onclick = removeBook
+  if (newBook.length >= 1) {
+    bookName.className = 'name';
+    deletBtn.className = 'delete';
+    bookName.textContent = newBook;
+    deletBtn.textContent = "delete";
+    li.appendChild(bookName);
+    li.appendChild(deletBtn);
+    list.appendChild(li);
+    deletBtn.onclick = removeBook
+  }
 }
 
 function removeBook() {
@@ -39,7 +41,7 @@ function searchBook() {
   searchBar.toLowerCase();
   const books = list.getElementsByTagName('li');
   Array.from(books).forEach(book => {
-    const title = book.firstElementChild.textContent.toLowerCase();
+    const title = book.textContent.toLowerCase();
     if (title.indexOf(searchBar) !== -1) {
       book.style.display = "block";
     } else {
