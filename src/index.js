@@ -7,6 +7,7 @@ function addBook() {
   event.preventDefault();
   newTitle();
   clearArea()
+  searchBook();
 }
 
 function newTitle() {
@@ -31,4 +32,18 @@ function removeBook() {
 
 function clearArea() {
   document.getElementById('newTitle').value = "";
+}
+
+function searchBook() {
+  const searchBar = document.forms['search-books'].querySelector('input').value;
+  searchBar.toLowerCase();
+  const books = list.getElementsByTagName('li');
+  Array.from(books).forEach(book => {
+    const title = book.firstElementChild.textContent.toLowerCase();
+    if (title.indexOf(searchBar) !== -1) {
+      book.style.display = "block";
+    } else {
+      book.style.display = "none";
+    }
+  })
 }
