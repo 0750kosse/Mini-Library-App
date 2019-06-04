@@ -49,3 +49,9 @@ function searchBook() {
     }
   })
 }
+
+function hideAllBooks() {
+  const checked = document.getElementById('hideBooks').checked;
+  if (checked == true) { list.style.display = "none" }
+  else { list.style.display = "block" }
+}
