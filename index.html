@@ -13,7 +13,7 @@
     <header>
       <div id="page-banner">
         <h1 class="title">Mini Reading App</h1>
-        <form id="search-books" onkeyup="searchBook()">
+        <form id="search-books" onkeyup="searchBook()" onsubmit="event.preventDefault()">
           <input type=" text" placeholder="Search books..." />
         </form>
       </div>
