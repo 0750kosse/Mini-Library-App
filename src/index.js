@@ -37,7 +37,7 @@ function clearArea() {
 }
 
 function searchBook() {
-  const searchBar = document.forms['search-books'].querySelector('input').value;
+  const searchBar = document.forms['search-bar'].querySelector('input').value;
   searchBar.toLowerCase();
   const books = list.getElementsByTagName('li');
   Array.from(books).forEach(book => {

@@ -5,15 +5,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="src/css/styles.css">
-  <title>Mini Reading App</title>
+  <title>Mini Library</title>
 </head>
 
 <body>
   <div id="wrapper">
     <header>
       <div id="page-banner">
-        <h1 class="title">Mini Reading App</h1>
-        <form id="search-books" onkeyup="searchBook()" onsubmit="event.preventDefault()">
+        <h1 class="title">Mini Library</h1>
+        <form id="search-bar" onkeyup="searchBook()" onsubmit="event.preventDefault()">
           <input type=" text" placeholder="Search books..." />
         </form>
       </div>
@@ -23,15 +23,17 @@
       <ul>
         <li>
           <span class="name">Name of the Wind</span>
-          <span class="delete">delete</span>
+          <span class="delete">Delete</span>
         </li>
         <li>
           <span class="name">Romancero Gitano</span>
-          <span class="delete">delete</span>
+          <span class="delete">Delete</span>
         </li>
       </ul>
-      <input type="checkbox" id="hideBooks" name="hideBooks" onclick="hideAllBooks()">
-      <label for="hideBooks">Hide all books</label>
+      <div id="hideBooks-section">
+        <input type="checkbox" id="hideBooks" name="hideBooks" onclick="hideAllBooks()">
+        <label for="hideBooks">Hide all books</label>
+      </div>
     </div>
     <form id="add-book" onsubmit="addBook()">
       <input type="text" id="newTitle" placeholder="Add a book..." />
