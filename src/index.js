@@ -43,7 +43,9 @@ function searchBook() {
   Array.from(books).forEach(book => {
     const title = book.textContent.toLowerCase();
     if (title.indexOf(searchBar) !== -1) {
-      book.style.display = "block";
+      let ulStyles = document.querySelector('#wrapper');
+      let compStyles = window.getComputedStyle(ulStyles);
+      book.style.display = compStyles;
     } else {
       book.style.display = "none";
     }
