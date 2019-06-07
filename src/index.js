@@ -19,7 +19,7 @@ function newTitle() {
     bookName.className = 'name';
     deletBtn.className = 'delete';
     bookName.textContent = newBook;
-    deletBtn.textContent = "delete";
+    deletBtn.textContent = "Delete";
     li.appendChild(bookName);
     li.appendChild(deletBtn);
     list.appendChild(li);
@@ -42,10 +42,9 @@ function searchBook() {
   const books = list.getElementsByTagName('li');
   Array.from(books).forEach(book => {
     const title = book.textContent.toLowerCase();
+    book.classList.add("book-item");
     if (title.indexOf(searchBar) !== -1) {
-      let ulStyles = document.querySelector('#wrapper');
-      let compStyles = window.getComputedStyle(ulStyles);
-      book.style.display = compStyles;
+      book.style.display = "flex";
     } else {
       book.style.display = "none";
     }
