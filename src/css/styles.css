@@ -33,11 +33,11 @@ ul{
   padding: 0;
 }
 
-li {
+.book-item {
   display: flex;
   margin: 0 10px;
-}  
-
+} 
+ 
 span {
   margin-bottom: 5px;
 }
