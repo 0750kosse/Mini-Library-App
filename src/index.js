@@ -19,7 +19,7 @@ function newTitle() {
     bookName.className = 'name';
     deletBtn.className = 'delete';
     bookName.textContent = newBook;
-    deletBtn.textContent = "delete";
+    deletBtn.textContent = "Delete";
     li.appendChild(bookName);
     li.appendChild(deletBtn);
     list.appendChild(li);
