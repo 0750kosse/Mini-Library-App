@@ -6,18 +6,18 @@ As extra functionality, the app allows the user to delete books, to perform book
 
 #Tasks
 
-I created an HTML page in index.html, containing 2 forms with textareas for the search functionality and another one to add books. 
+* I created an HTML page in index.html, containing 2 forms with textareas for the search functionality and another one to add books. 
 
-New books will be appended to the upper div, creating both a new title and a delete button when a submit event is detected. 
+* New books will be appended to the upper div, creating both a new title and a delete button when a submit event is detected. 
 
-Clears the area once the book is added to the list.
+* Clears the area once the book is added to the list.
 
 #Further extensions
 
-Prevent adding the same title.
+* Prevent adding the same title.
 
-Tablet and/or desktop versions.
+* Tablet and/or desktop versions.
 
-Fetching books from a book API & display them including images, authors, year, plot, etc...
+* Fetching books from a book API & display them including images, authors, year, plot, etc...
 
-Extend search functionality to allow the user to rerieve books by genere, author, etc...
+* Extend search functionality to allow the user to rerieve books by genere, author, etc...
