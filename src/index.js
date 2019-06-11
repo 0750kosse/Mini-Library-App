@@ -37,13 +37,14 @@ function clearArea() {
 }
 
 function searchBook() {
-  const searchBar = document.forms['search-books'].querySelector('input').value;
+  const searchBar = document.forms['search-bar'].querySelector('input').value;
   searchBar.toLowerCase();
   const books = list.getElementsByTagName('li');
   Array.from(books).forEach(book => {
     const title = book.textContent.toLowerCase();
+    book.classList.add("book-item");
     if (title.indexOf(searchBar) !== -1) {
-      book.style.display = "block";
+      book.style.display = "flex";
     } else {
       book.style.display = "none";
     }
