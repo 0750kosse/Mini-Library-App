@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/0750kosse/Mini-Library-App#readme",
   "devDependencies": {
-    "mocha": "^6.1.4"
+    "mocha": "^10.2.0"
   }
 }
